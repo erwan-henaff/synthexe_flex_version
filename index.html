@@ -15,7 +15,7 @@
 
 </head>
 <body>
-    <div class="container" style="background-color:lightgray;">
+    <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <!-- <a class="navbar-brand" href="#">Navbar</a> -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,18 +35,18 @@
                         Dropdown
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Roland JX-8P</a>
-                            <a class="dropdown-item" href="#">Yamaha Super JX</a>
+                            <a class="dropdown-item" href="#jx8p">Roland JX-8P</a>
+                            <a class="dropdown-item" href="#jx10">Yamaha Super JX</a>
                         <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Yamaha TX-81Z</a>
-                            <a class="dropdown-item" href="#">Yamaha FS1R</a>
-                            <a class="dropdown-item" href="#">Yamaha SY77</a>
+                            <a class="dropdown-item" href="#tx81z">Yamaha TX-81Z</a>
+                            <a class="dropdown-item" href="#fs1r">Yamaha FS1R</a>
+                            <a class="dropdown-item" href="#sy77">Yamaha SY77</a>
                         <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Dave Smith Tetra</a>
+                            <a class="dropdown-item" href="#tetra">Dave Smith Tetra</a>
                         <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Kawai K1</a>
+                            <a class="dropdown-item" href="#k1">Kawai K1</a>
                         <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">MAM MB33</a>
+                            <a class="dropdown-item" href="#mb33">MAM MB33</a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -134,98 +134,98 @@
             </a>
         </div>
     <!---          each synthetiseur presentation              -->
-
-        <div class="row d-flex align-items-center">
-            <div class="col-sm-5">
-                <img src="img/jx8pcar.jpg" alt="JX-8P" class="img-fluid">
-            </div>
-            <div class="col-sm-7 d-flex justify-content-center align-items-center">
-                <p>
-                    <ul>
-                        <li>6 analog voices</li>
-                        <li>Monotimbral</li>
-                        <li>Substractive synthesis</li>
-                    </ul>    
-                </p>
-            </div>
-        </div>
-        <div class="row d-flex align-items-center">
-                <div class="col-sm-5 order-sm-3 order-first">
-                    <img src="img/SuperJXcar.jpg" alt="Super JX" class="img-fluid">
+        <div class="container">
+            <div id="jx8p" class="row d-flex align-items-center">
+                <div class="col-sm-5">
+                    <img src="img/jx8pcar.jpg" alt="JX-8P" class="img-fluid">
                 </div>
-                <div class="col-sm-7 d-flex justify-content-center align-items-center order-2">
+                <div class="col-sm-7 d-flex justify-content-center align-items-center">
                     <p>
-                        <ul>
-                            <li>12 analog voices</li>
-                            <li>Bitimbral</li>
+                        <ul><h4>Roland JX-8P</h4>
+                            <li>6 analog voices</li>
+                            <li>Monotimbral</li>
                             <li>Substractive synthesis</li>
                         </ul>    
                     </p>
                 </div>
-        </div>
-        <div class="row d-flex align-items-center">
-            <div class="col-sm-5">
-                <img src="img/tx81zcar.jpg" alt="TX-81Z" class="img-fluid">
             </div>
-            <div class="col-sm-7 d-flex justify-content-center align-items-center">
-                <p>
-                    <ul>
-                        <li>8 digital voices</li>
-                        <li>Multitimbral : 8 tones</li>
-                        <li>FM synthesis</li>
-                    </ul>    
-                </p>
+            <div id="jx10" class="row d-flex align-items-center">
+                    <div class="col-sm-5 order-sm-3 order-first">
+                        <img src="img/SuperJXcar.jpg" alt="Super JX" class="img-fluid">
+                    </div>
+                    <div class="col-sm-7 d-flex justify-content-center align-items-center order-2">
+                        <p>
+                            <ul><h4>Roland Super JX</h4>
+                                <li>12 analog voices</li>
+                                <li>Bitimbral</li>
+                                <li>Substractive synthesis</li>
+                            </ul>    
+                        </p>
+                    </div>
             </div>
-        </div>
-        <div class="row d-flex align-items-center">
-            <div class="col-sm-5 order-sm-3 order-first">
-                <img src="img/fs1rcar.jpg" alt="FS1R" class="img-fluid">
+            <div id="tx81z" class="row d-flex align-items-center">
+                <div class="col-sm-5">
+                    <img src="img/tx81zcar.jpg" alt="TX-81Z" class="img-fluid">
+                </div>
+                <div class="col-sm-7 d-flex justify-content-center align-items-center">
+                    <p>
+                        <ul><h4>Yamaha TX-81Z</h4>
+                            <li>8 digital voices</li>
+                            <li>Multitimbral : 8 tones</li>
+                            <li>FM synthesis</li>
+                        </ul>    
+                    </p>
+                </div>
             </div>
-            <div class="col-sm-7 d-flex justify-content-center align-items-center order-2">
-                <p>
-                    <ul>
-                        <li>32 digital voices</li>
-                        <li>Multitimbral : 4 tones</li>
-                        <li>Substractive synthesis</li>
-                    </ul>    
-                </p>
+            <div id="fs1r" class="row d-flex align-items-center">
+                <div class="col-sm-5 order-sm-3 order-first">
+                    <img src="img/fs1rcar.jpg" alt="FS1R" class="img-fluid">
+                </div>
+                <div class="col-sm-7 d-flex justify-content-center align-items-center order-2">
+                    <p>
+                        <ul><h4>Yamaha FS1R</h4>
+                            <li>32 digital voices</li>
+                            <li>Multitimbral : 4 tones</li>
+                            <li>Substractive synthesis</li>
+                        </ul>    
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="row d-flex align-items-center">
-            <div class="col-sm-5">
-                <img src="img/sy77car.jpg" alt="SY77" class="img-fluid">
+            <div id="sy77" class="row d-flex align-items-center">
+                <div class="col-sm-5">
+                    <img src="img/sy77car.jpg" alt="SY77" class="img-fluid">
+                </div>
+                <div class="col-sm-7 d-flex justify-content-center align-items-center">
+                    <p>
+                        <ul><h4>Yamaha SY77</h4>
+                            <li>32 digital voices</li>
+                            <li>Multitimbral : 16 tones</li>
+                            <li>FM synthesis</li>
+                        </ul>    
+                    </p>
+                </div>
             </div>
-            <div class="col-sm-7 d-flex justify-content-center align-items-center">
-                <p>
-                    <ul>
-                        <li>32 digital voices</li>
-                        <li>Multitimbral : 16 tones</li>
-                        <li>FM synthesis</li>
-                    </ul>    
-                </p>
+            <div id="tetra" class="row d-flex align-items-center">
+                <div class="col-sm-5 order-sm-3 order-first">
+                    <img src="img/dstetracar.jpg" alt="Tetra" class="img-fluid">
+                </div>
+                <div class="col-sm-7 d-flex justify-content-center align-items-center order-2">
+                    <p>
+                        <ul><h4>Dave Smith Tetra</h4>
+                            <li>4 analog voices</li>
+                            <li>Multitimbral : 4 tones</li>
+                            <li>Substractive synthesis</li>
+                        </ul>    
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="row d-flex align-items-center">
-            <div class="col-sm-5 order-sm-3 order-first">
-                <img src="img/dstetracar.jpg" alt="Tetra" class="img-fluid">
-            </div>
-            <div class="col-sm-7 d-flex justify-content-center align-items-center order-2">
-                <p>
-                    <ul>
-                        <li>4 analog voices</li>
-                        <li>Multitimbral : 4 tones</li>
-                        <li>Substractive synthesis</li>
-                    </ul>    
-                </p>
-            </div>
-        </div>
-        <div class="row d-flex align-items-center">
+            <div id="k1" class="row d-flex align-items-center">
                 <div class="col-sm-5">
                     <img src="img/kawaik1car.jpg" alt="K1" class="img-fluid">
                 </div>
                 <div class="col-sm-7 d-flex justify-content-center align-items-center">
                     <p>
-                        <ul>
+                        <ul><h4>Kawai K1</h4>
                             <li>16 digital voices</li>
                             <li>Multitimbral : 8 tones</li>
                             <li>VM additive</li>
@@ -233,13 +233,13 @@
                     </p>
                 </div>
             </div>
-            <div class="row d-flex align-items-center">
+            <div id="mb33" class="row d-flex align-items-center">
                 <div class="col-sm-5 order-sm-3 order-first">
                     <img src="img/mammb33car.jpg" alt="MB33" class="img-fluid">
                 </div>
                 <div class="col-sm-7 d-flex justify-content-center align-items-center order-2">
                     <p>
-                        <ul>
+                        <ul><h4>MAM MB33</h4>
                             <li>1 analog voices</li>
                             <li>Monotimbral</li>
                             <li>Substractive synthesis</li>
@@ -247,7 +247,7 @@
                     </p>
                 </div>
             </div>
-
+        </div>
 
     </div>
     
