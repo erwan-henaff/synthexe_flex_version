@@ -7,18 +7,200 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/main.css">
     
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
 </head>
 <body>
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav>
+        <ul>
+            <li>
+                <a href="#carouselwithbabies">Overview</a>
+            </li>
+            <li><input id="checkboxid" type="checkbox"><label for="checkboxid">Synthesizers</label>  
+                
+                    <div><a class="item-synth" href="#jx8p">Roland JX-8P</a></div>
+                    <div><a class="item-synth" href="#jx10">Yamaha Super JX</a></div>
+                    <div><a class="item-synth" href="#tx81z">Yamaha TX-81Z</a></div>
+                    <div><a class="item-synth" href="#fs1r">Yamaha FS1R</a></div>
+                    <div><a class="item-synth" href="#sy77">Yamaha SY77</a></div>
+                    <div><a class="item-synth" href="#tetra">Dave Smith Tetra</a></div>
+                    <div><a class="item-synth" href="#k1">Kawai K1</a></div>
+                    <div><a class="item-synth" href="#mb33">MAM MB33</a></div>
+                
+            </li>
+            <li>
+                <a href="#mpc1000">Sequencer and more</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="likeajumbotron">
+            <h1>My Babies!</h1>
+            <p>A collection of old and not so old synthesizers</p>
+    </div>
+
+    <div class="flexcontainer">
+
+            <div class="section-titel text-center"><h2>My Babies</h2></div>
+
+            <div id="jx8p" class="notinview everysynth">
+                <div class="divimage">
+                    <img src="img/jx8pcar.jpg" alt="JX-8P">
+                </div>
+                <div >
+                        <ul><h4>Roland JX-8P</h4>
+                            <li>6 analog voices</li>
+                            <li>Monotimbral</li>
+                            <li>Substractive synthesis</li>
+                        </ul>    
+                </div>
+            </div>
+            <div id="jx10" class="notinview everysynth">
+                    <div class="divimage">
+                        <img src="img/SuperJXcar.jpg" alt="Super JX">
+                    </div>
+                    <div>
+                            <ul><h4>Roland Super JX</h4>
+                                <li>12 analog voices</li>
+                                <li>Bitimbral</li>
+                                <li>Substractive synthesis</li>
+                            </ul>    
+                    </div>
+            </div>
+            <div id="tx81z" class="notinview everysynth">
+                <div class="divimage">
+                    <img src="img/tx81zcar.jpg" alt="TX-81Z">
+                </div>
+                <div >
+                        <ul><h4>Yamaha TX-81Z</h4>
+                            <li>8 digital voices</li>
+                            <li>Multitimbral : 8 tones</li>
+                            <li>FM synthesis</li>
+                        </ul>    
+                </div>
+            </div>
+            <div id="fs1r" class="notinview everysynth">
+                <div class="divimage">
+                    <img src="img/fs1rcar.jpg" alt="FS1R">
+                </div>
+                <div>
+                    
+                        <ul><h4>Yamaha FS1R</h4>
+                            <li>32 digital voices</li>
+                            <li>Multitimbral : 4 tones</li>
+                            <li>Substractive synthesis</li>
+                        </ul>    
+                    
+                </div>
+            </div>
+            <div id="sy77" class="notinview everysynth">
+                <div class="divimage">
+                    <img src="img/sy77car.jpg" alt="SY77">
+                </div>
+                <div >
+                    
+                        <ul><h4>Yamaha SY77</h4>
+                            <li>32 digital voices</li>
+                            <li>Multitimbral : 16 tones</li>
+                            <li>FM synthesis</li>
+                        </ul>    
+                    
+                </div>
+            </div>
+            <div id="tetra" class="notinview everysynth">
+                <div class="divimage">
+                    <img src="img/dstetracar.jpg" alt="Tetra">
+                </div>
+                <div>
+                    
+                        <ul><h4>Dave Smith Tetra</h4>
+                            <li>4 analog voices</li>
+                            <li>Multitimbral : 4 tones</li>
+                            <li>Substractive synthesis</li>
+                        </ul>    
+                    
+                </div>
+            </div>
+            <div id="k1" class="notinview everysynth">
+                <div class="divimage">
+                    <img src="img/kawaik1car.jpg" alt="K1">
+                </div>
+                <div >
+                    
+                        <ul><h4>Kawai K1</h4>
+                            <li>16 digital voices</li>
+                            <li>Multitimbral : 8 tones</li>
+                            <li>VM additive</li>
+                        </ul>    
+                </div>
+            </div>
+            <div id="mb33" class="notinview everysynth">
+                <div class="divimage">
+                    <img src="img/mammb33car.jpg" alt="MB33">
+                </div>
+                <div>
+                    
+                        <ul><h4>MAM MB33</h4>
+                            <li>1 analog voices</li>
+                            <li>Monotimbral</li>
+                            <li>Substractive synthesis</li>
+                        </ul>    
+                </div>
+            </div>
+        </div>
+        <div class="flexcontainer">
+                <div class="section-titel text-center"><h2>Sequencer and more eventually</h2></div>
+                <div id="jx8p" class="notinview everysynth">
+                    <div class="divimage">
+                        <img src="img/mpc1000car.jpg" alt="MPC 1000">
+                    </div>
+                    <div >
+                            <ul><h4>Akai MPC 1000</h4>
+                                <li>Sequencer</li>
+                                <li>Sampler</li>
+                                <li>2 MIDI outputs</li>
+                            </ul>    
+                    </div>
+                </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="containerinthefooter">
+            <p> © erwan h. </p>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">   -->
             <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
@@ -55,9 +237,9 @@
         <div class="jumbotron">
                 <h1 class="display-4 text-center">My Babies!</h1>
                 <p class="lead text-center">A collection of old and not so old synthesizers</p>
-        </div>
+        </div> -->
         <!-- ----------------- carousel --------------------------------------     -->
-        <div id="carouselwithbabies" class="carousel slide" data-ride="carousel">
+        <!-- <div id="carouselwithbabies" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselwithbabies" data-slide-to="0" class="active bg-danger"></li>
                 <li data-target="#carouselwithbabies" data-slide-to="1" class="bg-danger"></li>
@@ -133,15 +315,15 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
-        </div>
+        </div> -->
     <!---          each synthetiseur presentation   ---------------        -->
-        <div class="container">
+        <!-- <div class="container">
             <div class="section-titel text-center"><h2>My Babies</h2></div>
             <div id="jx8p" class="row d-flex align-items-center notinview">
                 <div class="col-sm-5">
                     <img src="img/jx8pcar.jpg" alt="JX-8P" class="img-fluid">
                 </div>
-                <div class="col-sm-7 d-flex justify-content-center align-items-center">
+                <div >
                     <p>
                         <ul><h4>Roland JX-8P</h4>
                             <li>6 analog voices</li>
@@ -273,8 +455,8 @@
             </div>
         </footer>
 
-    </div>
-    
+    </div> -->
+
 </body>
 <script src="assets/main.js"></script>
 

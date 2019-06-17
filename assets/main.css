@@ -1,4 +1,153 @@
-.jumbotron {
+nav {
+    background-color: rgb(248, 248, 248);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    text-align: center;
+}
+nav ul li {
+    padding: 5px;
+    color: black;
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+input[type=checkbox] {
+    display: none;
+}
+input[type=checkbox]:checked ~ div {
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul li div {
+    height: 0;
+    overflow: hidden;
+    transition-duration: 0.5s;
+}
+/*    ----------------    part like a jumbotron                  -----------------   */
+
+.likeajumbotron {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 300px;
+    border-radius: 10px;
+
+    background-image: linear-gradient(rgb(179, 179, 179), rgb(255, 166, 0)), url("../img/jx-8p.jpg");
+    background-blend-mode: overlay;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.likeajumbotron h1, p {
+    background-color: #ffffffce;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.section-titel {
+    border-radius: 20px;
+    border: 1px solid black;
+    background: linear-gradient(rgb(211, 211, 211), rgb(255, 213, 136));
+}
+.everysynth {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    min-height: 200px;
+    border-radius: 20px;
+    border: 1px solid black;
+    background: linear-gradient(rgb(211, 211, 211), rgb(255, 213, 136));
+    overflow: hidden;
+}
+.everysynth div:nth-child(2) {
+    margin: auto;
+}
+/*   ------   to inverse the order of the div text with photo every two rows -----------------*/
+.flexcontainer .everysynth:nth-child(2n+1) div:nth-child(2) {
+    order:-1;
+}
+
+.divimage {
+    width: 100%;
+}
+.divimage img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.footer {
+    background-color: rgb(248, 248, 248);
+}
+.containerinthefooter {
+    display: flexbox;
+    align-content: center;
+}
+.containerinthefooter p {
+    text-align: center;
+}
+
+
+/*      part for teh animation on scrolling   -------------   */
+.notinview {
+    transform: rotateX(90deg);
+    opacity: 0;
+}
+.rotatez {
+    animation-name: rotatez;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    transition-duration: 0.8s;
+    opacity: 1;
+}
+
+@keyframes rotatez {
+    from {transform: rotateX(90deg) }
+    to {transform: rotateX(0deg) }
+}
+
+/*       one break point 768px        -------------------*/
+
+
+@media only screen and (min-width: 768px) {
+    .divimage {
+        width: 40%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .jumbotron {
     background-image: linear-gradient(rgb(44, 44, 44), rgb(255, 166, 0)), url("../img/jx-8p.jpg");
     background-blend-mode: overlay;
 
@@ -55,4 +204,4 @@
 @keyframes rotatez {
     from {transform: rotateX(90deg) }
     to {transform: rotateX(0deg) }
-}
+} */

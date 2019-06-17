@@ -1,4 +1,4 @@
-// from : https://eddyerburgh.me/animate-elements-scrolled-view-vanilla-js
+from : https://eddyerburgh.me/animate-elements-scrolled-view-vanilla-js
 
 
 var animateonscroll = function () {
