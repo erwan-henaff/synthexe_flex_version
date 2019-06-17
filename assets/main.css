@@ -33,5 +33,15 @@
     border-radius: 20px;
     border: 1px solid black;
     background: linear-gradient(rgb(211, 211, 211), rgb(255, 213, 136));
+}
 
+.rotatez {
+    animation-name: rotatez;
+    animation-duration: 3s;
+    animation-iteration-count: 2;
+}
+
+@keyframes rotatez {
+    from {transform: rotateX(90deg) }
+    to {transform: rotateX(360deg) }
 }
