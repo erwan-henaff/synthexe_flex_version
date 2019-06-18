@@ -1,4 +1,104 @@
+.nav-mobile {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(248, 248, 248, 0.8);
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    /* --- the propertie below will be changed when checkbox/burger will be checked -- */
+    width:0;
+    transition: width 0.6s ease-in-out;
+    height: 100%;
+    overflow: hidden;
+}
+.nav-mobile ul {
+    list-style: none;
+}
+.nav-mobile ul li {
+    padding: 5px;  
+    width: 100%;
+}
+.nav-mobile ul li a {
+    color: black;
+    text-decoration: none;
+
+}
+
+.nav-mobile ul li div {
+    height:0;
+    overflow: hidden;
+    transition-duration: 0.5s;
+}
+.nav-mobile ul li div a {
+    text-decoration: none;
+    color: black;
+    width: 100%;
+}
+#burger {
+    display: none;
+}
+#labelburger {
+    position: fixed;
+    top: 0;
+    right:0;
+    z-index: 11;
+}
+#burgericon {
+    width:50px;
+    height:50px;
+    background: rgb(211, 211, 211, 0.7);
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*  ---- here when burger/label/checkbox is checked the menu appears from the left */
+#burger[type=checkbox]:checked ~ .nav-mobile {
+    width:100%;
+}
+
+/*   -------------- this part is the burger css animation ------   */
+#burger[type=checkbox]:checked ~ #labelburger #burgericon .line {
+    transform: rotate(495deg);
+}
+#burger[type=checkbox]:checked ~ #labelburger #burgericon .line::after {
+    transform: rotate(-90deg);
+    top: 0;
+}
+#burger[type=checkbox]:checked ~ #labelburger #burgericon .line::before {
+    transform: rotate(-90deg);
+    top: 0;
+}
+
+.line, .line::before, .line::after{
+    content: '';
+    width: 35px;
+    height: 7px;
+    background-color: #333;
+    position: absolute;
+    transition: 0.4s;
+}
+.line::before {
+    top: -17px;
+}
+.line::after {
+    top: 17px; 
+}
+
+
+
+/*  ----------     dropdown menu inside nav-bar ------       */
+ul li .checkboxid-mob[type=checkbox] {
+    display: none;
+}
+ul li .checkboxid-mob[type=checkbox]:checked + div {
+    height: 20px;
+    width: 100%;
+}
+
+/*  -------          nav-bar above 768 px breakpoint --------      */
 nav {
+    display: none;
     background-color: rgb(248, 248, 248);
     padding-top: 10px;
     padding-bottom: 10px;
@@ -20,10 +120,10 @@ nav ul li a {
     text-decoration: none;
     color: black;
 }
-input[type=checkbox] {
+ul li input[type=checkbox] {
     display: none;
 }
-input[type=checkbox]:checked ~ div {
+ul li input[type=checkbox]:checked ~ div {
     height: 20px;
     display: flex;
     flex-direction: column;
@@ -76,9 +176,9 @@ nav ul li div {
     margin: auto;
 }
 /*   ------   to inverse the order of the div text with photo every two rows -----------------*/
-.flexcontainer .everysynth:nth-child(2n+1) div:nth-child(2) {
+/* .flexcontainer .everysynth:nth-child(2n+1) div:nth-child(2) {
     order:-1;
-}
+} */
 
 .divimage {
     width: 100%;
@@ -124,6 +224,12 @@ nav ul li div {
 @media only screen and (min-width: 768px) {
     .divimage {
         width: 40%;
+    }
+    .flexcontainer .everysynth:nth-child(2n+1) div:nth-child(2) {
+        order: -1;
+    }
+    nav {
+        display: block;
     }
 }
 

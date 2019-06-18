@@ -9,6 +9,8 @@
     
 </head>
 <body>
+
+    <!-- this navigation bar is here we are above the breakpoint od 768px -->
     <nav>
         <ul>
             <li>
@@ -31,6 +33,39 @@
             </li>
         </ul>
     </nav>
+    <!-- the input below will be checked through the label tag -->
+    <input id="burger" type="checkbox">
+    <!-- inside the label tag we will put a div with burger css animation -->
+    <Label id="labelburger" for="burger">
+        <div id="burgericon">
+            <div class="line"></div>
+        </div>
+    </label>
+
+    <!--    this navigation bar is here when we are on mobile version --------
+    below 768 px and when the input/checkbox/label/burger above is checked   ----- -->
+    <div class="nav-mobile">
+        <ul>
+            <li>
+                <a href="#carouselwithbabies">Overview</a>
+            </li>
+            <li><input id="checkboxid-mob" type="checkbox"><label for="checkboxid-mob">Synthesizers</label>  
+                
+                    <div><a class="item-synth" href="#jx8p">Roland JX-8P</a></div>
+                    <div><a class="item-synth" href="#jx10">Yamaha Super JX</a></div>
+                    <div><a class="item-synth" href="#tx81z">Yamaha TX-81Z</a></div>
+                    <div><a class="item-synth" href="#fs1r">Yamaha FS1R</a></div>
+                    <div><a class="item-synth" href="#sy77">Yamaha SY77</a></div>
+                    <div><a class="item-synth" href="#tetra">Dave Smith Tetra</a></div>
+                    <div><a class="item-synth" href="#k1">Kawai K1</a></div>
+                    <div><a class="item-synth" href="#mb33">MAM MB33</a></div>
+                
+            </li>
+            <li>
+                <a href="#mpc1000">Sequencer</a>
+            </li>
+        </ul>
+    </div>
 
     <div class="likeajumbotron">
             <h1>My Babies!</h1>
@@ -152,7 +187,7 @@
                     <div class="divimage">
                         <img src="img/mpc1000car.jpg" alt="MPC 1000">
                     </div>
-                    <div >
+                    <div>
                             <ul><h4>Akai MPC 1000</h4>
                                 <li>Sequencer</li>
                                 <li>Sampler</li>
