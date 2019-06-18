@@ -1,6 +1,6 @@
 .nav-mobile {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     background-color: rgba(248, 248, 248, 0.8);
     z-index: 10;
     position: fixed;
@@ -13,15 +13,28 @@
 }
 .nav-mobile ul {
     list-style: none;
+    width: 100%;
 }
 .nav-mobile ul li {
     padding: 5px;  
     width: 100%;
 }
 .nav-mobile ul li a {
+    display: block;
+    background: rgb(211, 211, 211, 0.7);
+    width: 100%;
+    /* height: 100%; */
+    padding: 10px;
     color: black;
     text-decoration: none;
-
+}
+.nav-mobile ul li label {
+    display: block;
+    background: rgb(211, 211, 211, 0.7);
+    width: 100%;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
 }
 
 .nav-mobile ul li div {
@@ -30,9 +43,12 @@
     transition-duration: 0.5s;
 }
 .nav-mobile ul li div a {
+    background: rgb(211, 211, 211, 0.7);
     text-decoration: none;
     color: black;
     width: 100%;
+    height: 100%;
+    padding: 5px;
 }
 #burger {
     display: none;
@@ -46,7 +62,7 @@
 #burgericon {
     width:50px;
     height:50px;
-    background: rgb(211, 211, 211, 0.7);
+    background: rgba(230, 230, 230, 0.836);
     border-radius: 7px;
     display: flex;
     justify-content: center;
@@ -74,7 +90,7 @@
     content: '';
     width: 35px;
     height: 7px;
-    background-color: #333;
+    background-color: rgb(255, 158, 11);
     position: absolute;
     transition: 0.4s;
 }
@@ -92,7 +108,7 @@ ul li .checkboxid-mob[type=checkbox] {
     display: none;
 }
 ul li .checkboxid-mob[type=checkbox]:checked + div {
-    height: 20px;
+    min-height: 20px;
     width: 100%;
 }
 
@@ -200,7 +216,7 @@ nav ul li div {
 }
 
 
-/*      part for teh animation on scrolling   -------------   */
+/*      part for the animation on scrolling   -------------   */
 .notinview {
     transform: rotateX(90deg);
     opacity: 0;
@@ -230,6 +246,13 @@ nav ul li div {
     }
     nav {
         display: block;
+    }
+    #labelburger {
+        display: none;
+    }
+    /*  shouldn't be useful in 99.9 % of case but just to be sure  */
+    .nav-mobile {
+        display: none;
     }
 }
 
