@@ -35,21 +35,48 @@ animateonscroll().init();
 // part about the carousel with vanilla js 
 // from https://www.youtube.com/watch?v=KcdBOoK3Pfw
 
-var imgcarousel = document.querySelectorAll('.imgcarousel');
+const carouselbox = document.querySelector('.carouselbox');
+const carouselimg = document.querySelectorAll('.imgcarousel');
+const carouselcont = document.querySelector('.carouselcont');
 
-var rightbtn = document.querySelector('#rightbtn');
+const leftBtn = document.querySelector('#leftbtn');
+const rightBtn = document.querySelector('#rightbtn');
+var divimgcarousel = document.querySelectorAll('.divimgcarousel');
 
-rightbtn.addEventListener('click', moveImgRight);
+let counter = 0;
+const size = carouselcont.clientWidth;
+carouselbox.style.width = size * divimgcarousel.length + "px";
+for (let index = 0; index < divimgcarousel.length; index++) {
+    divimgcarousel[index].style.width = size + "px";
+}
 
-var positotheright = imgcarousel[0].style.left;
+// add event resize for responsiveness
 
-var movingunit = window.innerWidth * 80/100;
+window.addEventListener('resize', init2);
 
-function moveImgRight () {
-    for (let index = 0; index < imgcarousel.length; index++) {
-        var movetorightdist = parseInt(imgcarousel[index].style.left);
-        movetorightdist = movetorightdist + movingunit; 
-        imgcarousel[index].style.left = movetorightdist + "px";
+function init2 () {
+    const size = carouselcont.clientWidth;
+    carouselbox.style.width = size * divimgcarousel.length + "px";
+    for (let index = 0; index < divimgcarousel.length; index++) {
+    divimgcarousel[index].style.width = size + "px";
     }
-    
-};
+}
+
+
+// button addevent
+
+rightBtn.addEventListener('click', ()=>{
+    if(counter<8) {
+        carouselbox.style.transition = "transform 0.5s ease-in-out";
+        counter++;
+        carouselbox.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    }
+});
+
+leftBtn.addEventListener('click', ()=>{
+    if(counter>0) {
+        carouselbox.style.transition = "transform 0.5s ease-in-out";
+        counter--;
+        carouselbox.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    }
+});

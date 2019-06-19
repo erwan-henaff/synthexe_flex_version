@@ -50,6 +50,9 @@
     height: 100%;
     padding: 5px;
 }
+
+/* ---------   here is the styling and animation(below)  of the burger  -------- */
+
 #burger {
     display: none;
 }
@@ -68,23 +71,6 @@
     justify-content: center;
     align-items: center;
 }
-/*  ---- here when burger/label/checkbox is checked the menu appears from the left */
-#burger[type=checkbox]:checked ~ .nav-mobile {
-    width:100%;
-}
-
-/*   -------------- this part is the burger css animation ------   */
-#burger[type=checkbox]:checked ~ #labelburger #burgericon .line {
-    transform: rotate(495deg);
-}
-#burger[type=checkbox]:checked ~ #labelburger #burgericon .line::after {
-    transform: rotate(-90deg);
-    top: 0;
-}
-#burger[type=checkbox]:checked ~ #labelburger #burgericon .line::before {
-    transform: rotate(-90deg);
-    top: 0;
-}
 
 .line, .line::before, .line::after{
     content: '';
@@ -100,6 +86,30 @@
 .line::after {
     top: 17px; 
 }
+
+/*  ---- here when burger/label/checkbox is checked the menu appears from the left */
+#burger[type=checkbox]:checked ~ .nav-mobile {
+    width:100%;
+}
+
+/* -----------------------------------------------------------------*/
+/*   -------------- this part is the burger css animation ------   */
+/* -----------------------------------------------------------------*/
+
+
+#burger[type=checkbox]:checked ~ #labelburger #burgericon .line {
+    transform: rotate(495deg);
+}
+#burger[type=checkbox]:checked ~ #labelburger #burgericon .line::after {
+    transform: rotate(-90deg);
+    top: 0;
+}
+#burger[type=checkbox]:checked ~ #labelburger #burgericon .line::before {
+    transform: rotate(-90deg);
+    top: 0;
+}
+
+
 
 
 
@@ -152,24 +162,112 @@ nav ul li div {
 }
 /*   ------------  part like a carousel   --------------       */
 .carouselcont {
+    position: relative;
     width:80%;
+    height: 320px;
     margin: auto;
     background: linear-gradient(rgb(211, 211, 211), rgb(255, 213, 136));
-    /* overflow: hidden; */
+    overflow: hidden;
 }
+
 .carouselbox {
     display: flex;
-    flex-direction: row;
+    flex-flow: row;
+    justify-content: center;
     height: 300px;
     overflow: hidden;
 }
-.carouselbox img {
-    width: 100%;
-    object-fit: contain;
-    position: relative;
-    /* left:-200px; */
+.divimgcarousel {
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
 }
 
+.carouselbox div img {
+    /* max-height: 100%; */
+    max-width: 70%;
+    object-fit: scale-down;
+    display: block;
+    margin: auto;
+}
+.carouselcont button {
+    display: none;
+}
+
+#labeliconleft {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    left: 0;
+}
+#labeliconright {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    right: 0;
+}
+
+.carouselicon {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 30px;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 0;
+
+}
+.line2 {
+    content: '';
+    width: 30px;
+    height: 5px;
+    background-color: rgb(255, 158, 11);
+    position: absolute;
+}
+.line2::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 5px;
+    background-color: rgb(255, 158, 11);
+    transform: rotateZ(90deg); 
+}
+
+#rightbtn:active ~ #labeliconright .line2 {
+    animation: rotatexneg 0.3s 1;
+}
+#rightbtn:active ~ #labeliconright .line2::after {
+    animation: rotatex2 0.3s 1;
+}
+#leftbtn:active ~ #labeliconleft .line2 {
+    animation: rotatex 0.3s 1;
+}
+#leftbtn:active ~ #labeliconleft .line2::after {
+    animation: rotatexneg2 0.3s 1;
+}
+
+@keyframes rotatex {
+    from {transform: rotateZ(0deg) }
+    to {transform: rotateZ(180deg) }
+}
+@keyframes rotatex2 {
+    from {transform: rotateZ(0deg) }
+    to {transform: rotateZ(90deg) }
+}
+@keyframes rotatexneg {
+    from {transform: rotateZ(0deg) }
+    to {transform: rotateZ(-180deg) }
+}
+@keyframes rotatexneg2 {
+    from {transform: rotateZ(0deg) }
+    to {transform: rotateZ(-90deg) }
+}
 
 /*    ----------------    part like a jumbotron         -----------------   */
 
