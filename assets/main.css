@@ -1,0 +1,379 @@
+.nav-mobile {
+    display: flex;
+    /* flex-direction: column; */
+    background-color: rgba(248, 248, 248, 0.8);
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    /* --- the propertie below will be changed when checkbox/burger will be checked -- */
+    width:0;
+    transition: width 0.6s ease-in-out;
+    height: 100%;
+    overflow: hidden;
+}
+.nav-mobile ul {
+    list-style: none;
+    width: 100%;
+}
+.nav-mobile ul li {
+    padding: 5px;  
+    width: 100%;
+}
+.nav-mobile ul li a {
+    display: block;
+    background: rgb(211, 211, 211, 0.7);
+    width: 100%;
+    /* height: 100%; */
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+.nav-mobile ul li label {
+    display: block;
+    background: rgb(211, 211, 211, 0.7);
+    width: 100%;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.nav-mobile ul li div {
+    height:0;
+    overflow: hidden;
+    transition-duration: 0.5s;
+}
+.nav-mobile ul li div a {
+    background: rgb(211, 211, 211, 0.7);
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+}
+
+/* ---------   here is the styling and animation(below)  of the burger  -------- */
+
+#burger {
+    display: none;
+}
+#labelburger {
+    position: fixed;
+    top: 0;
+    right:0;
+    z-index: 11;
+}
+#burgericon {
+    width:50px;
+    height:50px;
+    background: rgba(230, 230, 230, 0.836);
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line, .line::before, .line::after{
+    content: '';
+    width: 35px;
+    height: 7px;
+    background-color: rgb(255, 158, 11);
+    position: absolute;
+    transition: 0.4s;
+}
+.line::before {
+    top: -17px;
+}
+.line::after {
+    top: 17px; 
+}
+
+/*  ---- here when burger/label/checkbox is checked the menu appears from the left */
+#burger[type=checkbox]:checked ~ .nav-mobile {
+    width:100%;
+}
+
+/* -----------------------------------------------------------------*/
+/*   -------------- this part is the burger css animation ------   */
+/* -----------------------------------------------------------------*/
+
+
+#burger[type=checkbox]:checked ~ #labelburger #burgericon .line {
+    transform: rotate(495deg);
+}
+#burger[type=checkbox]:checked ~ #labelburger #burgericon .line::after {
+    transform: rotate(-90deg);
+    top: 0;
+}
+#burger[type=checkbox]:checked ~ #labelburger #burgericon .line::before {
+    transform: rotate(-90deg);
+    top: 0;
+}
+
+
+
+
+
+/*  ----------     dropdown menu inside nav-bar ------       */
+ul li .checkboxid-mob[type=checkbox] {
+    display: none;
+}
+ul li .checkboxid-mob[type=checkbox]:checked + div {
+    min-height: 20px;
+    width: 100%;
+}
+
+/*  -------          nav-bar above 768 px breakpoint --------      */
+nav {
+    display: none;
+    background-color: rgb(248, 248, 248);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    text-align: center;
+}
+nav ul li {
+    padding: 5px;
+    color: black;
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+ul li input[type=checkbox] {
+    display: none;
+}
+ul li input[type=checkbox]:checked ~ div {
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul li div {
+    height: 0;
+    overflow: hidden;
+    transition-duration: 0.5s;
+}
+/*   ------------  part like a carousel   --------------       */
+.carouselcont {
+    position: relative;
+    width:80%;
+    height: 320px;
+    margin: auto;
+    background: linear-gradient(rgb(211, 211, 211), rgb(255, 213, 136));
+    overflow: hidden;
+}
+
+.carouselbox {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    height: 300px;
+    overflow: hidden;
+}
+.divimgcarousel {
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.carouselbox div img {
+    /* max-height: 100%; */
+    max-width: 70%;
+    object-fit: scale-down;
+    display: block;
+    margin: auto;
+}
+.carouselcont button {
+    display: none;
+}
+
+#labeliconleft {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    left: 0;
+}
+#labeliconright {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    right: 0;
+}
+
+.carouselicon {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 30px;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 0;
+
+}
+.line2 {
+    content: '';
+    width: 30px;
+    height: 5px;
+    background-color: rgb(255, 158, 11);
+    position: absolute;
+}
+.line2::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 5px;
+    background-color: rgb(255, 158, 11);
+    transform: rotateZ(90deg); 
+}
+
+#rightbtn:active ~ #labeliconright .line2 {
+    animation: rotatexneg 0.3s 1;
+}
+#rightbtn:active ~ #labeliconright .line2::after {
+    animation: rotatex2 0.3s 1;
+}
+#leftbtn:active ~ #labeliconleft .line2 {
+    animation: rotatex 0.3s 1;
+}
+#leftbtn:active ~ #labeliconleft .line2::after {
+    animation: rotatexneg2 0.3s 1;
+}
+
+@keyframes rotatex {
+    from {transform: rotateZ(0deg) }
+    to {transform: rotateZ(180deg) }
+}
+@keyframes rotatex2 {
+    from {transform: rotateZ(0deg) }
+    to {transform: rotateZ(90deg) }
+}
+@keyframes rotatexneg {
+    from {transform: rotateZ(0deg) }
+    to {transform: rotateZ(-180deg) }
+}
+@keyframes rotatexneg2 {
+    from {transform: rotateZ(0deg) }
+    to {transform: rotateZ(-90deg) }
+}
+
+/*    ----------------    part like a jumbotron         -----------------   */
+
+.likeajumbotron {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 300px;
+    border-radius: 10px;
+
+    background-image: linear-gradient(rgb(179, 179, 179), rgb(255, 166, 0)), url("../img/jx-8p.jpg");
+    background-blend-mode: overlay;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.likeajumbotron h1, p {
+    background-color: #ffffffce;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.section-titel {
+    border-radius: 20px;
+    border: 1px solid black;
+    background: linear-gradient(rgb(211, 211, 211), rgb(255, 213, 136));
+}
+.everysynth {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    min-height: 200px;
+    border-radius: 20px;
+    border: 1px solid black;
+    background: linear-gradient(rgb(211, 211, 211), rgb(255, 213, 136));
+    overflow: hidden;
+}
+.everysynth div:nth-child(2) {
+    margin: auto;
+}
+/*   ------   to inverse the order of the div text with photo every two rows -----------------*/
+/* .flexcontainer .everysynth:nth-child(2n+1) div:nth-child(2) {
+    order:-1;
+} */
+
+.divimage {
+    width: 100%;
+}
+.divimage img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.footer {
+    background-color: rgb(248, 248, 248);
+}
+.containerinthefooter {
+    display: flexbox;
+    align-content: center;
+}
+.containerinthefooter p {
+    text-align: center;
+}
+
+
+/*      part for the animation on scrolling   -------------   */
+.notinview {
+    transform: rotateX(90deg);
+    opacity: 0;
+}
+.rotatez {
+    animation-name: rotatez;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    transition-duration: 0.8s;
+    opacity: 1;
+}
+
+@keyframes rotatez {
+    from {transform: rotateX(90deg) }
+    to {transform: rotateX(0deg) }
+}
+
+/*       one break point 768px        -------------------*/
+
+
+@media only screen and (min-width: 768px) {
+    .divimage {
+        width: 40%;
+    }
+    .flexcontainer .everysynth:nth-child(2n+1) div:nth-child(2) {
+        order: -1;
+    }
+    nav {
+        display: block;
+    }
+    #labelburger {
+        display: none;
+    }
+    /*  shouldn't be useful in 99.9 % of case but just to be sure  */
+    .nav-mobile {
+        display: none;
+    }
+}
+
+
+
